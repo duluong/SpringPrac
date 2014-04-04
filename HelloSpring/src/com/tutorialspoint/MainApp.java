@@ -9,7 +9,10 @@ public class MainApp {
 				new ClassPathXmlApplicationContext("Beans.xml");
 
 		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-		
+		obj.setMessage("Chao ban dau mua xuan");
 		obj.getMessage();
+		
+		HelloWorld objV = (HelloWorld) context.getBean("helloWorld");
+		objV.getMessage();
 	}
 }
